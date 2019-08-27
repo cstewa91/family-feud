@@ -5,25 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 
     <title>Family Feud</title>
 </head>
 <body>
+    <header>
+        <div class="question-container">
+            <div class="question"></div>
+        </div>
+    </header>
     <main>
-        <section id="team-1">
-
+        <section id="team-1" class="team-container">
+            <div class="team-name-container">
+                <input type="text" class="team-name" placeholder="Team 1">
+            </div>
+            <div class="points-container">
+                <div class="points">0</div>
+            </div>
         </section>
-        <section id="game-board">
-
+        <section id="game-board" class="board-container">
+            <div class="answer-points">0</div>
+            <div class="answer-container">
+                <div class="answer answer-1">
+                    <div class="number number-1">1</div>
+                </div>
+                <div class="answer answer-2">
+                    <div class="number number-2">2</div>
+                </div>
+                <div class="answer answer-3">
+                    <div class="number number-3">3</div>
+                </div>
+                <div class="answer answer-4">
+                    <div class="number number-4"></div>
+                </div>
+                <div class="answer answer-5">
+                    <div class="number number-5"></div>
+                </div>
+                <div class="answer answer-6">
+                    <div class="number number-6"></div>
+                </div>
+                <div class="answer answer-7">
+                    <div class="number number-7"></div>
+                </div>
+                <div class="answer answer-8">
+                    <div class="number number-8"></div>
+                </div>
+            </div>
         </section>
-        <section id="team-2">
-
+        <section id="team-2" class="team-container">
+            <div class="team-name-container">
+                <input type="text" class="team-name" placeholder="Team 2">
+            </div>
+            <div class="points-container">
+                <div class="points">0</div>
+            </div>
         </section>
     </main>
     <footer id="footer">
-        
+
     </footer>
 </body>
 </html>
