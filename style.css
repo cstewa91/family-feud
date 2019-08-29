@@ -11,6 +11,10 @@ body {
 header {
     width: 100%;
     height: 15%;
+    background-color: #1b4099;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -18,6 +22,18 @@ main {
     flex-flow: row;
     width: 100%;
     height: 75%;
+    background-image: url('background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.question {
+    color: white;
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
 }
 
 .team-container {
@@ -25,6 +41,7 @@ main {
     flex-flow: column;
     align-items: center;
     flex: 0 0 20%;
+    background-color: #1b4099;
 }
 
 .team-name-container {
@@ -54,7 +71,7 @@ main {
 }
 
 .points-container {
-    width: 100%;
+    width: 70%;
     flex: 0 0 65%;
     display: flex;
     justify-content: center;
@@ -90,7 +107,9 @@ main {
     flex: 0 0 60%;
 }
 
-.answer-points {
+.total-points {
+    margin-bottom: 18px;
+    height: 134px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +117,7 @@ main {
     border: 7px solid black;
     padding: 5px;
     text-align: center;
-    width: 28%;
-    height: 100px;
+    width: 21%;
     font-weight: 900;
     font-size: 64px;
     color: white;
@@ -109,32 +127,70 @@ main {
 }
 
 .answer-container {
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: black;
-    border-radius: 5px;
 }
 
 .answer {
-    flex: 0 0 47%;
+    position: relative;
+    flex: 0 0 46%;
     display: flex;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
     border: 3px solid rgb(197, 197, 197);
-    height: 80px;
+    height: 94px;
     margin: 10px;
     background: rgb(82,152,247);
     background: linear-gradient(180deg, rgba(82,152,247,1) 0%, rgba(27,64,153,1) 100%);
+    cursor: pointer;
 }
 
+.answer-info {
+    flex: 0 0 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
 
+.answer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    font-size: 64px;
+    flex: 1 0 70%;
+    display: none;
+    text-transform: capitalize;
+    background-color: #0f1641;
+}
+
+.answer-points {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 0 0 30%;
+    color: white;
+    font-weight: 900;
+    font-size: 64px;
+    display: none;
+}
+
+.number-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .number {
+    flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,16 +199,18 @@ main {
     text-align: center;
     color: white;
     width: 61px;
-    height: 51px;
+    height: 63px;
     font-size: 55px;
     background-color: #1d2975;
     border-radius: 50%;
     border: 2px solid white;
+    display: none;
 }
 
 
 footer {
     height: 10%;
+    background-color: #1b4099;
 }
 
 /* dark blue #1b4099
