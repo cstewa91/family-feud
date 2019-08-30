@@ -207,6 +207,10 @@ main {
     display: none;
 }
 
+.no-click {
+    pointer-events: none;
+}
+
 
 footer {
     height: 10%;

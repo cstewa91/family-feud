@@ -27,6 +27,8 @@ function showAnswer() {
     $(this).find('.number').css('display', 'none')
     $(this).find('.answer-text').css('display', 'flex')
     $(this).find('.answer-points').css('display', 'flex')
+    $(this).addClass('no-click')
+    addTeamPoints()
 }
 
 function addQuestionAndAnswer() {
@@ -35,6 +37,7 @@ function addQuestionAndAnswer() {
     var index = 1; 
     for(var i = 0; i < array.length - 1; i+=2) {
             $('.question').text(array[0])
+            $('.answer-' + index).removeClass('no-click')
             $('.answer-' + index + ' .answer-text').text(array[i + 1])
             $('.answer-' + index + ' .answer-points').text(array[i + 2])
             $('.answer-' + index + ' .number').css('display', 'unset').text(index)
@@ -49,5 +52,12 @@ function addAnswerPoints() {
     var totalPoints = parseInt($('.total-points').text());
     var answerPoints = parseInt($(this).find('.answer-points').text());
     var addedPoints = totalPoints + answerPoints;
-    $('.total-points').text(addedPoints)
+    $('.total-points').text(addedPoints);
+}
+
+function addTeamPoints() {
+    var allAnswers = false;
+    $('.answer').each(function(){
+        
+    })
 }
