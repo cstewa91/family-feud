@@ -28,10 +28,14 @@ var answerShown = 0;
 function initApp() {
     addClickHandlers();
     addQuestionAndAnswer();
+    $('.team-name-2').val('Team 2')
+    $('.team-name-1').val('Team 1')
 }
 
 function addClickHandlers() {
     $('.answer').on('click', showAnswer)
+    $('.team-name-2').on('change', updateTeamName)
+    $('.team-name-1').on('change', updateTeamName)
 }
 
 function showAnswer() {
@@ -84,10 +88,14 @@ function checkAnswers() {
 }
 
 function addTeamPoints() {
+    var teamOneCurrent = parseInt($('#team-1-points').text()) 
+    var teamTwoCurrent = parseInt($('#team-2-points').text()) 
     if(team1Turn) {
-        $('#team-1-points').text(addedPoints)
+        var totalOneTeamPoints = teamOneCurrent + addedPoints
+        $('#team-1-points').text(totalOneTeamPoints)
     } else {
-        $('#team-2-points').text(addedPoints)
+        var totalTwoTeamPoints = teamTwoCurrent + addedPoints
+        $('#team-2-points').text(totalTwoTeamPoints)
     }
     setTimeout(function(){
         addQuestionAndAnswer();
@@ -103,4 +111,13 @@ function resetBoard() {
 
 function teamTurn() {
     
+}
+
+function updateTeamName() {
+    var teamName = $(this).val()
+    if($(this).hasClass('team-name-1')) {
+        $('.play-team-1').text(teamName)
+    } else {
+        $('.play-team-2').text(teamName)
+    }
 }
